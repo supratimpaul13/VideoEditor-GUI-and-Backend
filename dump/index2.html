@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Electron OBS GUI</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #navBar {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    #content {
+      display: flex;
+      height: calc(100vh - 40px);
+    }
+
+    #scenesList, #sourcesList {
+      flex: 0 0 200px;
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    #previewArea {
+      flex: 1;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="navBar">
+    <!-- Add navigation bar content here -->
+    OBS GUI
+  </div>
+  <div id="content">
+    <div id="scenesList">
+      <!-- Add scenes list content here -->
+      <h3>Scenes List</h3>
+      <ul>
+        <li>Scene 1</li>
+        <li>Scene 2</li>
+        <!-- Add more scenes here -->
+      </ul>
+    </div>
+    <div id="sourcesList">
+      <!-- Add sources list content here -->
+      <h3>Sources List</h3>
+      <ul>
+        <li>Source 1</li>
+        <li>Source 2</li>
+        <!-- Add more sources here -->
+      </ul>
+    </div>
+    <div id="previewArea">
+      <!-- Add preview area content here -->
+      <h3>Preview Area</h3>
+      <div id="previewCanvas">
+        <!-- You can use canvas or other elements to display preview -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

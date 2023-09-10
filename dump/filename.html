@@ -1,0 +1,153 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Viewer</title>
+  <style>
+    #fileInput {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <input type="file" id="fileInput" multiple>
+  <ul id="fileList"></ul>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+
+    fileInput.addEventListener('change', handleFileSelect);
+
+    function handleFileSelect(event) {
+      fileList.innerHTML = '';
+
+      const files = event.target.files;
+      const fileNames = [];
+
+      for (let i = 0; i < files.length; i++) {
+        fileNames.push(files[i].name);
+      }
+
+      fileNames.sort();
+
+      for (let i = 0; i < fileNames.length; i++) {
+        const listItem = document.createElement('li');
+        listItem.textContent = fileNames[i];
+        fileList.appendChild(listItem);
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Viewer</title>
+  <style>
+    #fileInput {
+      margin: 10px;
+    }
+    #fileStack {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <input type="file" id="fileInput">
+  <ul id="fileStack"></ul>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const fileStack = document.getElementById('fileStack');
+
+    fileInput.addEventListener('change', handleFileSelect);
+
+    function handleFileSelect(event) {
+      const file = event.target.files[0];
+
+      if (file) {
+        const listItem = document.createElement('li');
+        listItem.textContent = file.name;
+        fileStack.insertBefore(listItem, fileStack.firstChild);
+      }
+
+      // Clear the file input for selecting the next file
+      fileInput.value = null;
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Viewer</title>
+    <style>
+        #fileInput {
+            display: none;
+            /* Hide the file input */
+        }
+
+        #selectButton {
+            margin: 10px;
+        }
+
+        #fileStack {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="selectButton">Select File</button>
+    <input type="file" id="fileInput">
+    <ul id="fileStack"></ul>
+
+    <script>
+        const selectButton = document.getElementById('selectButton');
+        const fileInput = document.getElementById('fileInput');
+        const fileStack = document.getElementById('fileStack');
+        const fileNames = [];
+
+        selectButton.addEventListener('click', () => {
+            fileInput.click(); // Trigger the hidden file input
+        });
+
+        fileInput.addEventListener('change', handleFileSelect);
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                fileNames.push(file.name);
+                fileNames.sort();
+
+                updateFileList();
+            }
+
+            fileInput.value = null;
+        }
+
+        function updateFileList() {
+            fileStack.innerHTML = '';
+
+            for (const fileName of fileNames) {
+                const listItem = document.createElement('li');
+                listItem.textContent = fileName;
+                fileStack.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+
+</html>

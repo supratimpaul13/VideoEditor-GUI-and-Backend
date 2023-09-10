@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Electron Video App</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="video_file_container">
+
+    <div id="source_file">
+
+      <div id="source_file_top">
+        <h3>Files</h3>
+      </div>
+
+      <div id="source_file_contents">
+        <h1 id="source_file_contents_h1">Imported Files</h1>
+      </div>
+
+    </div>
+
+
+    <div id="logs">
+
+      <div id="logs_top">
+        <h3>Gesture Logs</h3>
+      </div>
+
+      <div id="log_contents">
+        <h1>Log contents</h1>
+      </div>
+    </div>
+
+    <div class="videoContainer">
+
+      <div id="videoPlayer_top">
+        <h3>Video Playback</h3>
+      </div>
+
+      <div id="videoPlayer_container">
+        <video id="videoPlayer" controls width="840" height="445"></video>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="utils">
+
+    <div id="btns">
+      <button onclick="openVideo()">Open Video</button>
+      <button>Genarate logs</button>
+      <button>Export</button>
+    </div>
+
+    <div id="timeline">
+      <h2>Timeline</h2>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

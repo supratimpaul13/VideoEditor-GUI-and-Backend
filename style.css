@@ -1,0 +1,169 @@
+body {
+    background-color: #191b26;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.video_file_container {
+    width: 99vw;
+    /* height: 90vh; */
+    margin: 0 auto;
+    /* This will horizontally center the div within its parent */
+    display: flex;
+    /* To make sure the video is horizontally centered within the container */
+    justify-content: center;
+    /* To horizontally center the video within the container */
+    align-items: center;
+    /* To vertically center the video within the container */
+    gap: 5px;
+}
+
+#source_file {
+    position: relative;
+    height: 52vh;
+    width: 30%;
+    border: 2px solid #2b2e38;
+    border-radius: 5px;
+    padding: 24px;
+    background-color: #2b2e38;
+}
+
+#source_file_top{
+    position: absolute;
+    background-color: #3c404b;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    width: 27.4vw;
+    height: 35px;
+    right: -1px;
+    bottom: 442px;
+}
+
+#source_file_top h3{
+    position: relative;
+    border: 0px;
+    bottom: 12px;
+    left: 12px;
+}
+
+#source_file_contents{
+    position: absolute;
+    border: 1px solid red;
+    top: 100px;
+}
+
+#logs {
+    position: relative;
+    height: 55vh;
+    width: 30%;
+    border: 2px solid #2b2e38;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #2b2e38;
+}
+
+#logs_top{
+    position: absolute;
+    background-color: #3c404b;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    width: 25.8vw;
+    height: 35px;
+    right: 0px;
+    bottom: 442px;
+}
+
+#logs_top h3{
+    position: relative;
+    border: 0px;
+    bottom: 12px;
+    left: 12px;
+}
+
+#log_contents{
+    position: absolute;
+    border: 1px solid red;
+    top: 100px;
+}
+
+.videoContainer{
+    position: relative;
+    background-color: #2b2e38;
+}
+
+#videoPlayer_top{
+    position: absolute;
+    background-color: #3c404b;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    width: 43.8vw;
+    height: 35px;
+    right: -5px;
+    bottom: 428px;
+    left: 0px;
+}
+
+#videoPlayer_top h3{
+    position: relative;
+    border: 0px;
+    bottom: 12px;
+    left: 12px;
+}
+
+#videoPlayer_container{
+    position: relative;
+}
+
+#videoPlayer {
+    position: relative;
+    max-width: 98%;
+    top: 20px;
+}
+
+.utils {
+    margin-top: 8px;
+    display: flex;
+    height: 37.9vh;
+    width: 99vw;
+    gap: 5px;
+}
+
+#btns {
+    width: 25.7vw;
+    border: 2px solid #2b2e38;
+    border-radius: 5px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #2b2e38;
+}
+
+button {
+
+    background-color: #3c404b;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+button:hover {
+    color: white;
+    background-color: #284cb8;
+}
+
+#timeline {
+    width: 70vw;
+
+    border: 2px solid #2b2e38;
+    border-radius: 5px;
+    padding: 12px;
+    color: #757de8;
+}
